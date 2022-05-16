@@ -1,5 +1,7 @@
 <?php
 
-$greeting = 'Hello World';
+$names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];
 
-require 'index.view.php';
+foreach ($names as $name) {
+  echo "I love $name! <br>";
+}
