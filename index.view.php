@@ -13,10 +13,12 @@
     </style>
 </head>
 <body>
+    <h1>Tasks for the Day</h1>
+
     <ul>
         <?php foreach ($task as $feature => $val) : ?>
             <li>
-                <strong> <?= $feature; ?> </strong> <?= $val; ?>
+                <strong> <?= ucwords($feature); ?>: </strong> <?= $val; ?>
             </li>
         <?php endforeach; ?>
     </ul>
