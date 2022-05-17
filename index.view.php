@@ -14,9 +14,9 @@
 </head>
 <body>
     <ul>
-        <?php foreach ($names as $name) : ?>
+        <?php foreach ($task as $feature => $val) : ?>
             <li>
-                <?= $name; ?>
+                <strong> <?= $feature; ?> </strong> <?= $val; ?>
             </li>
         <?php endforeach; ?>
     </ul>

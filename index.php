@@ -1,9 +1,10 @@
 <?php
 
-$names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];
-
-foreach ($names as $name) {
-  echo "I love $name! <br>";
-}
+$task = [
+    'title' => 'Finish homework',
+    'due' => 'today',
+    'assigned_to' => 'John',
+    'completed' => false
+];
 
 require "index.view.php";
