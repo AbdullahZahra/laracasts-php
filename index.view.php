@@ -18,7 +18,11 @@
     <ul>
         <?php foreach ($task as $feature => $val) : ?>
             <li>
-                <strong> <?= ucwords($feature); ?>: </strong> <?= $val; ?>
+                <?php if ($task == completed) : ?>
+                    <strong> <? ucwords($feature); ?>: </strong> <?= $val ? 'Completed' : 'Incomplete'; ?> // didn't work
+                    <?php continue; ?>
+                <?php endif; ?>
+                    <strong> <?= ucwords($feature); ?>: </strong> <?= $val; ?>
             </li>
         <?php endforeach; ?>
     </ul>
