@@ -18,13 +18,19 @@
     <ul>
         <?php foreach ($task as $feature => $val) : ?>
             <li>
-                <?php if ($task == completed) : ?>
-                    <strong> <? ucwords($feature); ?>: </strong> <?= $val ? 'Completed' : 'Incomplete'; ?> // didn't work
-                    <?php continue; ?>
-                <?php endif; ?>
                     <strong> <?= ucwords($feature); ?>: </strong> <?= $val; ?>
             </li>
         <?php endforeach; ?>
+        <?php
+            if ($task['completed'])
+            {
+                echo 'Complete';
+            }
+            else
+            {
+                echo 'Incomplete';
+            }
+        ?>
     </ul>
 </body>
 </html>
