@@ -16,21 +16,11 @@
     <h1>Tasks for the Day</h1>
 
     <ul>
-        <?php foreach ($task as $feature => $val) : ?>
+        <?php foreach ($tasks as $task) : ?>
             <li>
-                    <strong> <?= ucwords($feature); ?>: </strong> <?= $val; ?>
+                    <strong> <?= ucwords($task->description); ?>: </strong>
             </li>
         <?php endforeach; ?>
-        <?php
-            if ($task['completed'])
-            {
-                echo 'Complete';
-            }
-            else
-            {
-                echo 'Incomplete';
-            }
-        ?>
     </ul>
 </body>
 </html>
