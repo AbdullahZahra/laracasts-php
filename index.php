@@ -1,10 +1,12 @@
 <?php
 
-$task = [
-    'title' => 'Finish homework',
-    'due' => 'today',
-    'assigned_to' => 'John',
-    'completed' => false
-];
+require 'functions.php';
 
-require "index.view.php";
+if (isAllowed(1))
+{
+    echo 'You are allowed';
+}
+else
+{
+    echo 'You are not allowed';
+}
